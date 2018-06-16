@@ -1,0 +1,23 @@
+﻿@model System.Collections.Generic.List<WebApplication1.Dtos.PeopleDto>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Created Date</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var people in Model)
+        {
+            <tr>
+                <td>@people.Id</td>
+                <td>@people.Name</td>
+                <td>@people.Age</td>
+                <td>@people.CreatedDate</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,11 @@
+G:\vs_social_proj\core proj\corewebapp\WebApplication1\WebApplication1\bin\Release\netcoreapp2.0\WebApplication1.deps.json
+G:\vs_social_proj\core proj\corewebapp\WebApplication1\WebApplication1\bin\Release\netcoreapp2.0\WebApplication1.runtimeconfig.json
+G:\vs_social_proj\core proj\corewebapp\WebApplication1\WebApplication1\bin\Release\netcoreapp2.0\WebApplication1.runtimeconfig.dev.json
+G:\vs_social_proj\core proj\corewebapp\WebApplication1\WebApplication1\bin\Release\netcoreapp2.0\WebApplication1.dll
+G:\vs_social_proj\core proj\corewebapp\WebApplication1\WebApplication1\bin\Release\netcoreapp2.0\WebApplication1.pdb
+G:\vs_social_proj\core proj\corewebapp\WebApplication1\WebApplication1\obj\Release\netcoreapp2.0\WebApplication1.csprojResolveAssemblyReference.cache
+G:\vs_social_proj\core proj\corewebapp\WebApplication1\WebApplication1\obj\Release\netcoreapp2.0\WebApplication1.csproj.CoreCompileInputs.cache
+G:\vs_social_proj\core proj\corewebapp\WebApplication1\WebApplication1\obj\Release\netcoreapp2.0\WebApplication1.AssemblyInfoInputs.cache
+G:\vs_social_proj\core proj\corewebapp\WebApplication1\WebApplication1\obj\Release\netcoreapp2.0\WebApplication1.AssemblyInfo.cs
+G:\vs_social_proj\core proj\corewebapp\WebApplication1\WebApplication1\obj\Release\netcoreapp2.0\WebApplication1.dll
+G:\vs_social_proj\core proj\corewebapp\WebApplication1\WebApplication1\obj\Release\netcoreapp2.0\WebApplication1.pdb

@@ -1,0 +1,94 @@
+﻿@model WebApplication1.Dtos.PeopleDto
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .form-body {
+        margin-top: 50px;
+    }
+</style>
+<div class="form-body">
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control .need-valid", sop = "like" })
+        @Html.ValidationMessageFor(model => model.Name, string.Empty, new { @class = "help-block" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Age, new { @class = "control-label" })
+        @Html.TextAreaFor(model => model.Age, new { @type = "number", @class = "form-control .need-valid", sop = "like" })
+        @Html.ValidationMessageFor(model => model.Age, string.Empty, new { @class = "help-block" })
+    </div>
+    <button id="save" class="btn">Save</button>
+</div>
+<h1>People List</h1>
+<div id="peoples"></div>
+
+<h1>Log List</h1>
+<div id="logs"></div>
+
+
+<script>
+    window.onload = function () {
+        $('#save').click(function() {
+            save();
+        });
+
+        function validateContainer(containerId) {
+            var isValid = true;
+
+            $(containerId).each(function () {
+                var parent = $(this).closest(".editor-field").length > 0 ? $(this).closest(".editor-field") : $(this).parent();
+
+                if (!$(this).val()) {
+                    parent.addClass("has-error");
+                    isValid = false;
+                } else {
+                    parent.removeClass("has-error");
+                }
+            });
+
+            return isValid;
+        }
+
+        function refreshPeopleList() {
+            $.post('/Home/GetPeoplePartial',
+                function (data) {
+                    $("#peoples").html(data);
+                });
+        }
+        function refreshLogList() {
+            $.post('/Home/GetLogPartial',
+                function (data) {
+                    $("#logs").html(data);
+                });
+        }
+
+        function save() {
+            var people = {};
+
+            if (!validateContainer(".need-valid")) {
+                console.log("eksik alan");
+                return false;
+            }
+
+            $(".form-control").each(function () {
+                people[$(this).attr("name")] = $(this).val();
+            });
+
+            $.post('/Home/SaveNewPeople',
+                { people: people },
+                function (data) {
+                    if (data.isError === false) {
+                        refreshPeopleList();
+                    }
+                });
+            return false;
+        }
+
+
+        refreshPeopleList();
+        refreshLogList();
+    }
+
+</script>
+

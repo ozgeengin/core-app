@@ -1,0 +1,17 @@
+﻿@model System.Collections.Generic.List<string>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Log</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var log in Model)
+    {
+        <tr>
+            <td>@log</td>
+        </tr>
+    }
+    </tbody>
+</table>
